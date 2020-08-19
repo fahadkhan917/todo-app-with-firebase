@@ -10,6 +10,7 @@ list.append(l);
 val.value=" ";
 
 
+//deletebtn
 var deletebtn=document.createElement('button');
 var delbtntxt=document.createTextNode('Delete');
 
@@ -17,6 +18,14 @@ var delbtntxt=document.createTextNode('Delete');
 deletebtn.appendChild(delbtntxt);
 deletebtn.setAttribute("onclick","dele()");
 l.appendChild(deletebtn);
+
+
+//editbtn
+var editbtn=document.createElement('button');
+var editbtntxt=document.createTextNode("Edit");
+editbtn.appendChild(editbtntxt);
+editbtn.setAttribute("onclick","ed()");
+l.appendChild(editbtn);
 
 
 
@@ -33,10 +42,9 @@ function dele(){
 }
 
 
-function edit(){
+function ed(){
 
 
-
-
+alert("hellow")
 
 }
