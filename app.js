@@ -24,7 +24,7 @@ l.appendChild(deletebtn);
 var editbtn=document.createElement('button');
 var editbtntxt=document.createTextNode("Edit");
 editbtn.appendChild(editbtntxt);
-editbtn.setAttribute("onclick","ed()");
+editbtn.setAttribute("onclick","ed(this)");
 l.appendChild(editbtn);
 
 
@@ -35,6 +35,13 @@ l.appendChild(editbtn);
 }
 
 
+function del(){
+ 
+list.innerHTML='';
+
+
+}
+
 function dele(){
 
 
@@ -42,9 +49,9 @@ function dele(){
 }
 
 
-function ed(){
+function ed(e){
 
 
-alert("hellow")
+
 
 }
