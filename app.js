@@ -7,4 +7,36 @@ var text=document.createTextNode(val.value);
 l.appendChild(text);
 list.append(l);
 
+val.value=" ";
+
+
+var deletebtn=document.createElement('button');
+var delbtntxt=document.createTextNode('Delete');
+
+
+deletebtn.appendChild(delbtntxt);
+deletebtn.setAttribute("onclick","dele()");
+l.appendChild(deletebtn);
+
+
+
+
+
+
+}
+
+
+function dele(){
+
+
+
+}
+
+
+function edit(){
+
+
+
+
+
 }
