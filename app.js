@@ -33,7 +33,7 @@ l.appendChild(editbtn);
 
 
 }
-
+console.log(firebase);
 
 function del(){
  
