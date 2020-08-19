@@ -16,7 +16,7 @@ var delbtntxt=document.createTextNode('Delete');
 
 
 deletebtn.appendChild(delbtntxt);
-deletebtn.setAttribute("onclick","dele()");
+deletebtn.setAttribute("onclick","dele(this)");
 l.appendChild(deletebtn);
 
 
@@ -42,10 +42,10 @@ list.innerHTML='';
 
 }
 
-function dele(){
+function dele(e){
 
-
-
+console.log(e.parentNode)
+e.parentNode.remove();
 }
 
 
