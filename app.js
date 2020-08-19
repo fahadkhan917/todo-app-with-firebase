@@ -4,7 +4,13 @@ function edit(){
 var val=document.getElementById("val");
 var database=firebase.database().ref('todos');
 var key=database.push().key;
-console.log(key)
+var todo={
+
+value:val.value,
+key:key
+
+}
+database.child(key).set(todo);
 
 // var l=document.createElement('li');
 // var text=document.createTextNode(val.value);
