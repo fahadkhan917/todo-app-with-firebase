@@ -52,6 +52,10 @@ e.parentNode.remove();
 function ed(e){
 
 
+var val=e.parentNode.firstChild.nodeValue;
+var edi=prompt("enter the change",val);
+e.parentNode.firstChild.nodeValue=edi;
+
 
 
 }
