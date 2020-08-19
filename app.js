@@ -1,5 +1,10 @@
 
 var list=document.getElementById("list");
+firebase.database().ref('todos').on('child_added',function(data   ){
+console.log(data.val())
+
+
+})
 function edit(){
 var val=document.getElementById("val");
 var database=firebase.database().ref('todos');
