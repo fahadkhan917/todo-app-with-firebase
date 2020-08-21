@@ -24,6 +24,7 @@ firebase.database().ref('todos').on('child_added',function(data){
     var editbtn=document.createElement('button');
     var editbtntxt=document.createTextNode("Edit");
     editbtn.appendChild(editbtntxt);
+    editbtn.setAttribute("id",data.val().key)
     editbtn.setAttribute("onclick","ed(this)");
     l.appendChild(editbtn);
     
@@ -66,13 +67,20 @@ e.parentNode.remove();
 }
 
 
-// function ed(e){
+function ed(e){
 
 
-// var val=e.parentNode.firstChild.nodeValue;
-// var edi=prompt("enter the change",val);
+var val=e.parentNode.firstChild.nodeValue;
+var edi=prompt("enter the change",val);
+var edittodo={
+value:edi,
+key:e.id
+
+
+}
+console.log(edittodo)
 // e.parentNode.firstChild.nodeValue=edi;
 
 
 
-// }
+}
