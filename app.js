@@ -53,12 +53,13 @@ val.value=" ";
 }
 console.log(firebase);
 
-// function del(){
+function del(){
  
-// list.innerHTML='';
+    firebase.database().ref('todos').remove()
+list.innerHTML='';
 
 
-// }
+}
 
 function dele(e){
 
@@ -78,8 +79,8 @@ key:e.id
 
 
 }
-console.log(edittodo)
-// e.parentNode.firstChild.nodeValue=edi;
+firebase.database().ref('todos').child(e.id).set(edittodo);
+e.parentNode.firstChild.nodeValue=edi;
 
 
 
