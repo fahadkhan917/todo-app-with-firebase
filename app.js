@@ -15,6 +15,7 @@ firebase.database().ref('todos').on('child_added',function(data){
     
     
     deletebtn.appendChild(delbtntxt);
+    deletebtn.setAttribute('id',data.val().key)
     deletebtn.setAttribute("onclick","dele(this)");
     l.appendChild(deletebtn);
     
@@ -40,6 +41,7 @@ key:key
 
 }
 database.child(key).set(todo);
+val.value=" ";
 
 
 
@@ -48,7 +50,7 @@ database.child(key).set(todo);
 
 
 }
-// console.log(firebase);
+console.log(firebase);
 
 // function del(){
  
@@ -57,11 +59,11 @@ database.child(key).set(todo);
 
 // }
 
-// function dele(e){
+function dele(e){
 
-// console.log(e.parentNode)
-// e.parentNode.remove();
-// }
+ firebase.database().ref('todos').child(e.id).remove()
+e.parentNode.remove();
+}
 
 
 // function ed(e){
